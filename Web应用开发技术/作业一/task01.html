@@ -12,8 +12,25 @@
 	<script type="text/javascript" >
 	// alert(isNaN("123"));
 	// alert(isNaN(NaN));
-	var myInput = document.myForm.first;
-	alert(myInput);
+	// var myInput = document.myForm.first;
+	// alert(myInput);
+	
+	// for (var i = 0; i < 1000; i++) {
+	// 	console.log(Math.floor(Math.random()*(10-1+1)+1));
+	// }
+	
+	function doCal()
+	{
+	do{
+	  var sqrtNum;
+	  var num=prompt('您要求的是哪个数的平方根,请您输入这个数!','');
+	  sqrt=Math.sqrt(num);
+	  document.write(num+"的平方根为:"+sqrt+"<br>");
+	  flag=confirm("要继续计算下一个数的平方根吗?")
+	  }
+	while(flag)
+	}
+	doCal();
 	</script>
 </body>
 </html>

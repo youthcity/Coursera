@@ -72,3 +72,23 @@ eval()是一个顶级函数并且跟任何对象无关。
 ```
 
 ##### parseFloat() 函数可解析一个字符串，并返回一个浮点数
+该函数通过正则表达式的方式,在需要更严格地转换float值时可能会有用:
+```
+var filterFloat = function (value) {
+    if(/^(\-|\+)?([0-9]+(\.[0-9]+)?|Infinity)$/
+      .test(value))
+      return Number(value);
+  return NaN;
+}
+
+console.log(filterFloat('421'));               // 421
+console.log(filterFloat('-421'));              // -421
+console.log(filterFloat('+421'));              // 421
+console.log(filterFloat('Infinity'));          // Infinity
+console.log(filterFloat('1.61803398875'));     // 1.61803398875
+console.log(filterFloat('421e+0'));            // NaN
+console.log(filterFloat('421hop'));            // NaN
+console.log(filterFloat('hop1.61803398875'));  // NaN
+```
+###10. 数学对象
+Math对象是静态对象，对象的方法和属性通过对象名直接访问，而不是对象实例
