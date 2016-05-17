@@ -1,0 +1,109 @@
+正则表达式站长工具 http://tool.chinaz.com/regex/
+JavaScript正则表达式工具 http://regexr.com/
+视频: Demystifying Regular Expressions
+JavaScript正则表达式
+https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions#special-word
+https://www.youtube.com/watch?v=EkluES9Rvak
+http://v.youku.com/v_show/id_XNTQ1NDU1MjM2.html?from=y1.7-1.2
+
+题目一
+正则表达式 
+ aaa bbb aaa|bbb
+
+练习文件
+aaa bbb ccc Yesterday is a history,tomorrow is a mystery,today is a gif
+昨日之日不可留，明日之日不可求，今日之日不可丢 《功夫熊猫》
+aaaabbb ccc dddaaa bbb ccc  aaa bbb
+
+题目二
+正则表达式
+Hi
+
+练习文件
+High Hi is a Belgian Dark Pop band.?Approved?by Record Collector UK, BBC 6, HUMO
+
+题目三
+正则表达式
+Hi.*Lucy
+
+练习文件
+Hi Lucy. How are you.
+
+题目四
+正则表达式
+0\d\d\d-\d\d\d\d\d\d\d\d
+0\d{3}-\d{8}
+
+练习文件
+学校保卫处电话：0516-83590110
+
+题目五
+重复
+ca{2}   ca{2，}  ca{2,5}
+
+练习文件
+caaaaaaab
+
+题目六
+元字符
+^\d{5,12}$
+
+练习文件
+10000 397731024 787485326 1343483119
+
+题目七
+字符类
+\(?0\d{2}[) -]?\d{8}
+
+练习文件
+(010)88886666  022-22334455
+
+题目八
+分支条件
+d{15}|\d{17}[0-9Xx]
+
+练习文件
+黄晓明,330726196507040016 陶君华,430421197710177894  章根华,330702194706165014 卫俊伟 320104198803171412
+
+题目九
+分组
+(\d{1,3}\.){3}\d{1,3}
+
+练习文件
+192.168.1.1
+
+题目十
+贪婪与懒惰
+a.*b  a.*?b
+
+练习文件
+aabab
+
+
+
+
+练习
+
+写出匹配以下性质字符串的正则表达式:
+
+字符串 2009
+周曙光同学有两个名字, 分别叫做 zola 和 zuola, 人们常常混淆. 请帮周曙光同学设计一个正则表达式, 可以帮他匹配自己的名字.
+二进制数字 (最少有一位, 但只含有 0 或者 1的)
+非零的十进制数字 (有至少一位数字, 但是不能以0开头)
+
+练习文件
+
+0108200920088964
+zuola -d
+zooooola
+world hello -012012 2009
+0909 zola zhou
+0101001
+zuola
+
+答案
+
+2009
+z(|u)ola或者您可以写成 zuola|zola
+(0|1)(0|1)*
+(1|2|3|4|5|6|7|8|9)(0|1|2|3|4|5|6|7|8|9)* 或[1-9]\d*
