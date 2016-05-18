@@ -1,0 +1,20 @@
+/*修改logo高度*/
+/*.navbar-brand{
+	padding: ;
+}*/
+
+.navbar{
+	padding: 10px 0;
+	margin-bottom: 0;
+}
+
+#center-logo{
+	position: absolute;
+	bottom: 15px;
+	left: 50%;
+}
+
+footer{
+	background-color: #3b2941;
+	color: #fff;
+}
