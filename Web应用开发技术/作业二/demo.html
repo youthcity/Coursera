@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<title>demo</title>
+	<link rel="stylesheet" type="text/css" href="css/mycss.css">
+</head>
+<body>
+	<div>
+		<label>兴趣：</label>
+			<input type="checkbox" name="hobby" value="唱歌">唱歌
+			<input type="checkbox" name="hobby" value="游泳">游泳
+			<input type="checkbox" name="hobby" value="跳舞">跳舞
+			<input type="checkbox" name="hobby" value="编程">编程
+			<input type="checkbox" name="hobby" value="上网">上网
+	</div>
+	<button type="submit" name="sbt" id="btn">提交</button>
+
+	<!-- 浮出层 -->
+	<div id="divFloat">
+		<h1>您的兴趣爱好为：(按住标题可移动)</h1>
+		<p id="answer">这是一个弹出层，点击遮罩或者按钮关闭
+			</p>
+			<form>
+				<input type="button" value="确定" id="btnSure"></input>
+				<input type="button" value="取消" id="btnCancel"></input>
+			</form>
+	</div>
+
+	<script type="text/javascript">
+
+	// 兼容的事件方法
+	function addEvent(ele, event, hanlder) {
+		if (ele.addEventListener) {
+			ele.addEventListener(event, hanlder, false);
+		} else if (ele.attachEvent) {
+			ele.attachEvent('on' + event, hanlder);
+		} else {
+			ele['on' + event] = hanlder;
+		}
+	}
+
+	function removeEvent(ele, event, hanlder) {
+		if (ele.removeEventListener) {
+			ele.removeEventListener(event, hanlder, false);
+		} else if (ele.detachEvent) {
+			ele.detachEvent('on' + event, hanlder);
+		} else {
+			ele['on' + event] = null;
+		}
+	}
+
+
+	//自定义方法
+	var $ = function(el){
+		return document.querySelector(el);
+	}
+
+	var $$ = function(el){
+		return document.querySelectorAll(el);
+	}
+
+	var createEle =function(tagName){
+		return document.createElement(tagName);
+	}
+
+	//浮层
+	var FloatLayer = function(element) {
+    this.ele = element;
+    this.visible = false;
+    this.maskEle = null;
+    this.animateTime = 600;
+
+    this.init();
+	}
+
+	FloatLayer.prototype = {
+    show: function() {
+        this.visible = true;
+        this.ele.style.transform = 'translate(-50%, -50%) scale(1,1)';
+        this.maskEle.style.visibility = 'visible';
+        this.ele.style.left = '50%';
+        this.ele.style.top = '50%';
+    },
+
+    hide: function() {
+        this.visible = false;
+        this.ele.style.transform = 'translate(-50%, -50%) scale(0,0)';
+        var self = this;
+        setTimeout(function() {
+            self.maskEle.style.visibility = 'hidden';
+        }, this.animateTime - 10)
+    },
+
+    init: function() {
+    	//创建遮罩并居中
+        this.maskEle = document.createElement('div');
+        this.maskEle.style.width = window.screen.width + 'px';
+        this.maskEle.style.height = window.screen.height + 'px';
+        this.maskEle.style.backgroundColor = 'rgba(108,108,108,0.7)';
+        this.maskEle.style.position = 'fixed';
+        this.maskEle.style.left = '50%';
+        this.maskEle.style.top = '50%';
+        this.maskEle.style.transform = 'translate(-50%, -50%)';
+        this.maskEle.style.visibility = this.visible ? 'visible' : 'hidden';
+
+        //使模态框居中
+        this.ele.style.position = 'absolute';
+        this.ele.style.left = '50%';
+        this.ele.style.top = '50%';
+        this.ele.style.width = this.ele.clientWidth + 'px';
+        this.ele.style.transform = 'translate(-50%, -50%) scale(0,0)';
+        this.ele.style.transition = this.animateTime + 'ms transform';
+
+        //先删除再添加模态框
+        this.ele.parentNode.removeChild(this.ele);
+        this.maskEle.appendChild(this.ele);
+        document.body.appendChild(this.maskEle);
+
+        //通过点击事件隐藏遮罩
+        var self = this;
+        addEvent(this.maskEle, 'click', function(e) {
+            if (self.maskEle === this) {
+                self.hide();
+            }
+        })
+
+        //阻止冒泡
+        addEvent(this.ele, 'click', function(e) {
+            e.stopPropagation();
+        })
+
+        //给模态框添加移动	
+        this.setDragNode(this.ele.children[0]);
+    },
+
+    setDragNode: function(node) {
+        var preX, preY;
+        var self = this;
+
+        node.style.cursor = 'move';
+
+        addEvent(node, 'mousedown', function(event) {
+            var disX = event.clientX - self.ele.offsetLeft,
+                disY = event.clientY - self.ele.offsetTop;
+
+            var move = function(event) {
+                self.ele.style.left = event.clientX - disX + "px";
+                self.ele.style.top = event.clientY - disY + "px";
+            };
+
+            addEvent(document, 'mousemove', move)
+            addEvent(document, 'mouseup', function() {
+                removeEvent(document, 'mousemove', move);
+            })
+        });
+    },
+    check: function() {
+    		var li_list = document.getElementsByName('hobby');
+			var arr = [];
+			var str = "";
+			for(var i = 0,len = li_list.length; i<len; i++){
+				if (li_list[i].checked) {
+					arr.push(li_list[i].value);
+				}
+			}
+			console.log(arr);
+			if (arr.length<= 0 ) {
+				str = "你没有爱好耶~";
+			}else {
+				str = arr.join("、");
+			}
+
+			
+			var p = document.getElementById('answer');
+			p.innerText = str;
+    }
+};
+
+	function createFloatLayer(ele) {
+    return new FloatLayer(ele);
+}
+
+	//即时函数 避免全局污染
+	(function() {	
+    var layer = createFloatLayer($('#divFloat'));
+    // layer.show();
+
+    addEvent($('#btn'), 'click', function() {
+    	layer.check();
+        layer.show();
+    })
+
+    addEvent($('#btnSure'), 'click', function() {
+        layer.hide();
+    })
+
+    addEvent($('#btnCancel'), 'click', function() {
+        layer.hide();
+    })
+})()
+
+	</script>
+</body>
+</html>

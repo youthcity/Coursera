@@ -1,0 +1,53 @@
+* {
+    font-family: Helvetica, Tahoma, Arial, STXihei, "华文细黑", "Microsoft YaHei", "微软雅黑", SimSun, "宋体", Heiti, "黑体", sans-serif;
+    font-size: 24px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+body {
+    text-align: center;
+    margin: 0px;
+    height: 2000px;
+}
+
+/*btn*/
+#btn {
+    border-radius: 20px;
+    width: 240px;
+    height: 48px;
+    border: none;
+    margin-top: 50px;
+    background-color: #5cb0de;
+}
+
+/*浮出层*/
+#divFloat {
+    border: 2px solid gray;
+    padding: 20px;
+    text-align: left;
+    border-radius: 20px;
+    background-color: rgb(240, 240, 240);
+    /*display: none;*/
+}
+
+#divFloat form {
+    text-align: right;
+}
+
+#divFloat form input {
+    width: 90px;
+    border-radius: 10px;
+    color: white;
+    border: none;
+}
+
+#divFloat form input:first-child {
+    background-color: rgb(34, 185, 60);
+}
+
+#divFloat form input:last-child {
+    background-color: rgb(204, 85, 92);
+}
