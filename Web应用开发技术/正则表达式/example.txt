@@ -1,8 +1,8 @@
 正则表达式站长工具 http://tool.chinaz.com/regex/
 JavaScript正则表达式工具 http://regexr.com/
-视频: Demystifying Regular Expressions
 JavaScript正则表达式
 https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions#special-word
+视频: Demystifying Regular Expressions
 https://www.youtube.com/watch?v=EkluES9Rvak
 http://v.youku.com/v_show/id_XNTQ1NDU1MjM2.html?from=y1.7-1.2
 
