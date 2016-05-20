@@ -1,0 +1,26 @@
+body {
+	font-family: Helvetica, Tahoma, Arial, STXihei, "华文细黑", "Microsoft YaHei", "微软雅黑", SimSun, "宋体", Heiti, "黑体", sans-serif;
+	font-size: 14px;
+}
+
+
+/*修改logo高度*/
+/*.navbar-brand{
+  padding: ;
+}*/
+
+.navbar {
+  padding: 10px 0;
+  margin-bottom: 0;
+}
+
+#center-logo {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+}
+
+footer {
+  background-color: #3b2941;
+  color: #fff;
+}

@@ -3,18 +3,52 @@
 	padding: ;
 }*/
 
-.navbar{
+.navbar {
 	padding: 10px 0;
 	margin-bottom: 0;
 }
 
-#center-logo{
+#center-logo {
 	position: absolute;
 	bottom: 15px;
 	left: 50%;
 }
 
-footer{
+footer {
 	background-color: #3b2941;
 	color: #fff;
+}
+
+
+/*第二层*/
+.section-qrcode{
+	position: relative;
+	height: 250px;
+}
+
+.section-qrcode>div {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.btn-download {
+	/*background-color: #3b2941;*/
+	/*color: #fff;*/
+	/*border: none;*/
+	margin-right: 70px;
+}
+
+.btn-download img {
+	padding-right: 20px;
+}
+
+#qrCode{
+	position: absolute;
+	bottom: 0;
+}
+
+/*第三层*/
+.section-group{
+	height: 500px;
 }
