@@ -3,10 +3,6 @@
 	padding: ;
 }*/
 
-.navbar {
-	padding: 10px 0;
-	margin-bottom: 0;
-}
 
 #center-logo {
 	position: absolute;
@@ -49,6 +45,48 @@ footer {
 }
 
 /*第三层*/
-.section-group{
-	height: 500px;
+.section-group {
+	height: auto;
+	/*background: #fff url(../img/lunbo/png/小组1.png) no-repeat;
+	background-size: 100% 100%;
+	color: #fff;
+	filter:"progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale')";
+   -moz-background-size:100% 100%;
+   background-size:100% 100%;*/
+}
+
+
+/*第四层*/
+
+/*第五层*/
+.section-nearby {
+	height: auto;
+
+	color: #fff;
+}
+
+/*第六层*/
+
+
+/*第七层*/
+.section-community {
+	height: auto;
+	color: #fff;
+}
+.row p{
+	height: 200px;
+	line-height: 200px;
+}
+
+.row2{
+	height: 180px;
+}
+.content{
+	width: auto;
+	height: auto;
+	padding-top: 55px;
+	margin: 0 auto;
+}
+.row2 p{
+	text-align: center;
 }

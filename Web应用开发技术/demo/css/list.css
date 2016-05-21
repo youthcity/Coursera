@@ -45,3 +45,31 @@ color: #333;
 	/*这里有问题*/
 	padding:6px auto;
 }
+
+
+/*product*/
+ul.clothes-up {
+	list-style: none;
+}
+
+
+
+ul.clothes-up li.col-xs-3 p {
+	padding: 0;
+	margin: 0;
+}
+
+
+
+
+ul.clothes-up li.col-xs-3 p a, ul.clothes-up li.col-xs-3 p a:hover {
+	color: #000;
+}
+
+ul.clothes-up li.col-xs-3 p.product-h {
+	padding-top: 10px;
+}
+
+/*div.row h2.page-header {
+	padding-left: 0px;
+}*/

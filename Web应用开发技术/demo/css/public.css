@@ -1,26 +1,59 @@
+
 body {
-	font-family: Helvetica, Tahoma, Arial, STXihei, "华文细黑", "Microsoft YaHei", "微软雅黑", SimSun, "宋体", Heiti, "黑体", sans-serif;
+	font-family: "Microsoft YaHei","微软雅黑", "华文细黑", Tahoma, Arial, STXihei,  SimSun, "宋体", Heiti, "黑体", sans-serif;
 	font-size: 14px;
 }
 
-
+/*ul.nav li{
+  padding-right: 10px;
+}*/
+ul.nav li a{
+  padding:14px;
+  font-size: 16px;
+}
 /*修改logo高度*/
 /*.navbar-brand{
   padding: ;
 }*/
 
 .navbar {
-  padding: 10px 0;
+  padding: 0;
   margin-bottom: 0;
+  border: none;
 }
 
 #center-logo {
   position: absolute;
   bottom: 15px;
   left: 50%;
+  transform: translate(-50%);
 }
 
 footer {
   background-color: #3b2941;
   color: #fff;
+}
+
+.footer-p{
+  padding: 10px 0;
+  border-bottom: 1px solid white;
+}
+
+.footer-p p{
+  padding:0;
+  margin: 0;
+}
+
+#nav-logo{
+  height: 98px;
+  background: rgb(248,248,248);
+}
+
+.logo {
+  padding-top: 15px;
+}
+
+#footer-p2{
+  margin: 10px 0;
+  padding: 0;
 }
