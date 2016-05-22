@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+
+        
+    <LinearLayout
+        android:id="@+id/regist_username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            style="@style/TextStyle"
+      		
+            android:id="@+id/textView1"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:paddingRight="5dp"
+            android:text="用户名：" />
+
+        <EditText
+            android:id="@+id/editText1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="请输入您的用户名"
+            android:textSize="18dp" >
+
+        </EditText>
+        
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/regist_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/regist_username"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            style="@style/TextStyle"
+     		
+            android:id="@+id/textView2"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:paddingRight="5dp"
+            android:text="密   码：" />
+
+        <EditText
+            android:id="@+id/editText2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="请输入您的密码"
+            android:inputType="textPassword"
+            android:textSize="18dp" >
+        </EditText>
+        
+    </LinearLayout>
+
+    <Button
+        style="@style/Button"
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/regist_password"
+ 		android:layout_centerHorizontal="true"
+        android:layout_marginTop="36dp"
+        android:text="登录" />
+
+    <Button
+        android:id="@+id/btnbrowser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="56dp"
+        android:text="打开浏览器" />
+    
+</RelativeLayout>
