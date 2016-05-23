@@ -1,7 +1,10 @@
 package com.example.helloworld;
 
+import com.example.helloworld.Activity02;
+
 import android.app.Activity;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -9,24 +12,29 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 
+
 public class MainActivity extends Activity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-		
+			
 		//获取界面按钮
 		Button button = (Button) findViewById(R.id.btnbrowser);
 		//给button按钮添加点击事件
 		button.setOnClickListener(new OnClickListener() {
 			
 			public void onClick(View v) {
-				// TODO Auto-generated method stub
-				Intent intent = new Intent();
-				intent.setAction("android.media.action.IMAGE_CAPTURE");
-				intent.addCategory("android.intent.category.DEFAULT");
-				startActivity(intent);
+;
+			 //意图
+	         Intent intent=new Intent();
+	         //意图的行为，隐式意图
+	         intent.setAction(Intent.ACTION_VIEW);
+	         //意图的数据
+	         intent.setData(Uri.parse("http://www.baidu.com"));
+	         //启动
+     	     startActivity(intent);
 			}
 		});
 	}
@@ -50,4 +58,15 @@ public class MainActivity extends Activity {
 		return super.onOptionsItemSelected(item);
 	}
 	
+	public void click(View v) {
+		// TODO Auto-generated method stub
+		Intent intent = new Intent(this, Activity02.class);
+		startActivity(intent);
+	}
+	
+	public void click2(View v) {
+		// TODO Auto-generated method stub
+		Intent intent = new Intent(this, Activity03.class);
+		startActivity(intent);
+	}
 }

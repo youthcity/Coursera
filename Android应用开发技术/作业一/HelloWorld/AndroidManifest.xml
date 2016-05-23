@@ -23,6 +23,21 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity 
+            android:name=".Activity02"
+            android:theme="@style/MyTheme"
+            android:label="用户登录界面" >
+        </activity>
+        <activity 
+            android:name=".Activity03"
+            android:theme="@style/MyTheme"
+            android:label="数据传递提交界面" >
+        </activity>
+        <activity 
+            android:name=".Activity04"
+            android:theme="@style/MyTheme"
+            android:label="展示信息" >
+        </activity>
     </application>
 
 </manifest>
