@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>2d贴图</title>
+	<style type="text/css">
+	body {
+		text-align: center;
+	}
+	</style>
+</head>
+<body>
+	<canvas id="canvas" width="800" height="600" style="background-color: rgb(222, 222, 222)">
+        您的浏览器不支持 canvas 标签
+    </canvas>
+    <br />
+    <button type="button" onclick="drawIt();">Demo</button>
+    <button type="button" onclick="stop()">暂停</button>
+    <button type="button" onclick="clearIt();">清除画布</button>
+    <script type="text/javascript">
+    	var ctx = document.getElementById('canvas').getContext('2d');
+    	var label = false;
+    	function drawIt(){
+    		var img = new Image();
+    			label = false;
+    		img.onload = function () {
+
+                /*
+                 * context.createPattern(image, repetitionStyle) - 指定贴图的平铺模式
+                 *   image - 图像对象。除了支持 HTMLImageElement 外，还支持 HTMLCanvasElement 和 HTMLVideoElement
+                 *   repetitionStyle - 平铺模式（无论任何平铺模式，首图均在画布的左上角）
+                 *     no-repeat - 不平铺，只贴图一次，当然也是在画布的左上角
+                 *     repeat-x - x 轴方向上平铺图片
+                 *     repeat-y - y 轴方向上平铺图片
+                 *     repeat - x 轴和 y 轴方向均平铺图片
+                 */
+                 var draw = function(){
+                 	var num = setInterval(function(){
+                 		if (label == true) {
+                 			clearInterval(num);
+                 		}
+                 		var x = Math.random()*(800-0)+0,
+                 		y = Math.random()*(600-0)+0;
+                 		ctx.drawImage(img, x,y);	
+                 	},50);
+                 }
+
+                 draw();
+            }
+            img.src = 'img/1.png';
+    	}
+
+        function clearIt() {
+            ctx.clearRect(0, 0, 800, 600);
+        }
+
+        function stop(){
+        	label = true;
+        }
+    </script>
+</body>
+</html>
