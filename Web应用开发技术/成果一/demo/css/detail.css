@@ -1,0 +1,29 @@
+/*左侧大图*/
+#detail-meta div img {
+	width: 380px;
+	height: 380px;
+	margin-top: 20px;
+}
+
+/* 左侧 img List*/
+.imgList {
+	width: 380px;
+	margin: 0;
+	padding: 0;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	/*padding-left: 0;*/
+	list-style: none;
+
+}
+.imgList li {
+	display: inline;
+	
+}
+.imgList li img {
+	padding-right: 15px;
+}
+
+li.imgList-last  img{
+	padding-right: 0;
+}
