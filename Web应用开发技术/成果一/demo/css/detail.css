@@ -1,5 +1,8 @@
 /*左侧大图*/
-#detail-meta div img {
+.detail-left{
+	float: left;
+}
+.detail-left div img {
 	width: 380px;
 	height: 380px;
 	margin-top: 20px;
@@ -26,4 +29,46 @@
 
 li.imgList-last  img{
 	padding-right: 0;
+}
+
+.detail-right {
+	float: left;
+	padding-left: 30px;
+}
+
+/*右侧*/
+.detail-brief {
+	width: 30em;
+}
+
+.imgList-right {
+	margin: 0;
+	padding: 0;
+	margin-top: 40px;
+	list-style: none;
+}
+
+.imgList-right li {
+	display: inline;
+	
+}
+
+.imgList-right li img {
+	padding-right: 20px;
+}
+
+.list-btn {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	margin-top: 20px;
+}
+
+.list-btn li {
+	display: inline;
+	padding-right: 20px;
+}
+
+.tb-buy {
+	margin-top: 20px;
 }
