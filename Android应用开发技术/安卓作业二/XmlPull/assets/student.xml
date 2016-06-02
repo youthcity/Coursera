@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<students>
+    <student id="20160601">
+        <name>宝宝</name>
+        <age>22</age>
+        <sex>男</sex>
+    </student>
+	<student id="20160602">
+        <name>吴彦祖</name>
+        <age>24</age>
+        <sex>男</sex>
+    </student>
+    	<student id="20160603">
+        <name>小樱</name>
+        <age>24</age>
+        <sex>女</sex>
+    </student>
+</students>
