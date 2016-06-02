@@ -18,7 +18,6 @@
     <link rel="stylesheet" type="text/css" href="../css/public.css">
     <link rel="stylesheet" type="text/css" href="../css/list.css">
     <link rel="stylesheet" type="text/css" href="../css/detail.css">
-    <link rel="stylesheet" type="text/css" href="../css/thickbox.css">
     
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -82,7 +81,7 @@
       <input type="checkbox"> Remember me
     </label>
   </div> -->
-  <button type="submit" class="btn btn-default">Sign in</button>
+  <button type="submit" class="btn btn-default" id="submit">Sign in</button>
       </form>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
@@ -116,13 +115,13 @@
                 <!-- <img src="../img/detail/detail_darkblue_380_380.png" title="高档精致T恤" alt="高档精致T恤" id="bigImg"> -->
                 
                 <!-- </a> -->
-                <a style="display:inline-block" href="../img/product/manup.png" title="高档精致T恤" class="thickbox" >
+                <a style="display:inline-block" href="../img/product/manup.png" title="高档精致T恤" rel="gal1" class="thickbox" >
                   <img src="../img/product/manup.png" title="高档精致T恤" alt="高档精致T恤" id="bigImg">
                 </a>
 
               </div>
               <ul class="imgList">
-                <li><img src="../img/detail/detail_drakblue_60_60.png"></li>
+                <li><a href="javascript:void(0);" rel="{gallery: 'gal1', smallimage: '../img/detail/detail_drakblue_60_60.png',largeimage: '../img/detail/detail_drakblue_60_60.png'}"><img src="../img/detail/detail_drakblue_60_60.png"></a></li>
                 <li><img src="../img/detail/detail_drakblue_60_60.png"></li>
                 <li><img src="../img/detail/detail_drakblue_60_60.png"></li>
                 <li><img src="../img/detail/detail_drakblue_60_60.png"></li>
@@ -189,7 +188,7 @@
     <script src="../js/jquery-1.12.3.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../js/jquery.zoom.js" ></script>
-    <script type="text/javascript" src="../js/thickbox-compressed.js"></script>
+    <script type="text/javascript" src="js/login.js"></script>
     <script type="text/javascript">
       $(document).ready(function(){
          // $('.jqzoom').zoom({
