@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>导航栏</title>
+	<style type="text/css">
+		body {
+			font-family:"Microsoft Yahei";
+			padding: 0;
+			margin: 0;
+		}
+		nav {
+			margin: 0;
+			padding: 0;
+			position: absolute;
+			z-index: 10000;
+			width: 100%;
+			height: 50px;
+			/*background-color: #333;*/
+			background-color: #888;
+			/*top: 0;*/
+			/*left: 0;*/
+		}
+		h1 {
+			margin: 0;
+			padding: 0;
+		}
+/*		a {
+			margin: 0;
+			padding: 0;
+		}*/
+		.logo {
+			float: left;
+			margin: 5px 40px 5px 40px; 
+		}
+		ul.header {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			float: right;
+			top: 0;
+		}
+		ul.header li {
+			margin: 0;
+			padding: 0;
+			height: 50px;
+			line-height: 50px;
+			float: left;
+			padding-right: 10px;
+		}
+
+		ul.header li a {
+			color: #fff;
+			text-decoration: none;
+		}
+
+	</style>
+</head>
+<body>
+	<nav>
+		<!-- 写LOGO一般用h1标签 -->
+			<a href="http://www.baidu.com" ><img src="img/logo.png" class="logo" alt="Logo"></a>
+
+			<ul class="header">
+			<li><a href="#nav-link-1" title="一个链接">导航链接一</a></li>
+			<li><a href="#nav-link-2" title="一个链接">导航链接二</a></li>
+			<li><a href="#nav-link-3" title="一个链接">导航链接三</a></li>
+			<li><a href="#nav-link-4" title="一个链接">导航链接四</a></li>
+		</ul>
+	</nav>
+</body>
+</html>
