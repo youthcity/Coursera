@@ -1,0 +1,188 @@
+/*@charset utf-8*/
+* {
+	padding: 0;
+	margin: 0;
+}
+
+.head{
+	height:65px;
+	background-color: #444;
+	position: relative;
+}
+.logo{
+	float: left;
+	position: absolute;/*absolute与relative结合使用*/
+	left: 40px;
+	top: 10px;
+	width: 120px;
+}
+.ulList>ul{
+	position: absolute;
+	right: 25px;
+	top: 7px;/*这数字是一个个试出来的*/
+}
+.ulList>ul>li{
+	float: right;
+	margin-left:30px;
+}
+.ulList>ul>li>a{
+	color: white;
+	font-size: 14px;
+}
+.ulList>ul>li:first-of-type>a{
+	color: #aaa
+}
+.container{
+	background-color:#ddd;
+	padding: 15px;
+}
+.pages{
+	border:1px solid #ccc;/*关于颜色，从#000(黑色)-#fff(白色)越来越浅*/
+	padding:20px;
+	background-color: #fff;
+	margin-bottom: 20px;
+	margin-top: 10px;/*默认的margin-top为0*/
+	box-shadow: 1px 1px 1px #888;/*page阴影横向偏移1px，纵向偏移1px，模糊范围1px，阴影颜色#888*/
+}
+.pages>h2,
+.pages>span{
+	color: #777;
+}
+.pages>span{
+	font-size: 12px;
+}
+.pages>p{
+	text-indent: 2em;
+}
+.pages>p>a{
+	color: blue;
+}
+.pages>p>a:hover{
+	color: red;
+	font-size: 20px;
+}
+.pages>ul{
+	list-style: none;
+	margin-left: -20px;
+	margin-bottom: 20px;
+}
+.pages>ul>li{
+	line-height: 1.8em;
+}
+.imgBox{
+	width: 130px;
+	height:0;
+	padding-bottom: 140px;
+	padding-left: 15px;
+	padding-right: 15px;
+	border:1px solid gray;
+	margin-left: 40px;
+}
+.imgBox>p{
+	font-size: 12px;
+	margin-bottom: 5px;
+	text-align: center;
+}
+.imgBox>img{
+	width: 100%;
+}
+.imgUL{
+	margin-top: 15px;
+}
+.pages>.imgUL>li{
+	margin-bottom: 15px;
+}
+.pages>ol{
+	margin-left:10px;
+}
+.pages>ol>li{
+	margin: 10px;
+}
+.pages>.annotation{
+	text-indent: 0;
+	margin-bottom: 0;
+}
+.pages>table{
+	width: 100%;
+	border-collapse: collapse;/*忽略border-spacing和empty-cells，边框合并为一个边框*/
+}
+.pages>table th{
+	background-color: #000;
+	color: #fff;
+	text-align: left;
+}
+.pages>table td,
+.pages>table th{
+	padding-left: 5px;
+}
+.pages>table tr:last-of-type{
+	background-color: #bbb;
+	font-weight: bold;
+}
+.pages>.formTitle{
+	border-left: 3px solid #ccc;
+	color:#000;
+	padding-left: 15px;
+	font-size: 17px;
+	line-height: 1.5;
+}
+.pages>form>.div1{
+	text-align: right;
+	margin:20px;
+	width: 50%;
+}
+.pages>form>.sex{
+	text-align: right;
+	margin:20px;
+	width: 44%;
+}
+.pages>form>.city{
+	text-align: right;
+	margin:20px;
+	width: 42%
+}
+.pages>form>.hobby{
+	text-align: right;
+	margin: 20px;
+	width: 51%;
+}
+.pages>form>.introduction{
+	text-align: right;
+	margin:20px;
+	width: 76%;
+}
+.pages>form>span{
+	margin-left: 39.5%;
+	font-size:13px;
+	color:#ccc;
+	margin-bottom:20px;
+}
+.pages>form>div>label{
+    
+	width: 30%
+	padding-right:10px;
+}
+.pages>form>div>textarea{
+	width: 50%;
+	height: 100px;
+}
+.button{
+	width: 90%;
+	display: block;
+	margin:auto;
+	margin-top: 30px;
+	color: #fff;
+	height: 45px;
+	background-color: blue;
+	border:none;
+	font-size: 14px;
+	border-radius: 5px;/*给button添加圆角边框*/
+}
+.foot>p{
+	padding-top: 70px;
+	padding-bottom: 60px;
+	text-align: center;
+	background-color: black;
+	margin-bottom: 0;
+	color:#fff;
+}

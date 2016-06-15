@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>导航栏制作</title>
+	<style type="text/css">
+		* {
+			padding: 0;
+			margin: 0;
+		}
+		nav {
+			position: relative;
+			height: 50px;
+			width: 100%;
+			background-color: #333;
+		}
+		nav a img {
+			position: absolute;
+			left: 0;
+			top: 0;
+			margin: 5px 40px 5px 40px;
+		}
+
+		ul {
+			list-style: none;
+			float: right;
+		}
+
+		ul li {
+			float: left;
+			padding-right: 10px;
+		}
+		
+		ul li a {
+			height: 50px;
+			line-height: 50px;
+			color: #fff;
+		}
+	</style>
+</head>
+<body>
+	<nav>
+		<a href="http://www.baidu.com"><img class="logo" src="img/logo.png"></a>
+		<ul class="header">
+			<li><a href="#nav-link-1" title="一个链接">导航链接一</a></li>
+			<li><a href="#nav-link-2" title="一个链接">导航链接二</a></li>
+			<li><a href="#nav-link-3" title="一个链接">导航链接三</a></li>
+			<li><a href="#nav-link-4" title="一个链接">导航链接四</a></li>
+		</ul>
+	</nav>
+</body>
+</html>

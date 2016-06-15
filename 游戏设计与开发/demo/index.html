@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>颜色反应堆</title>
+    <link rel="shortcut icon" type="image/ico" href="favicon.png" />
+    <!-- 适配移动端 -->
+    <meta name="viewport" content="width=device-width, height=device-height, user-scalable=no, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" type="text/css" href="css/position.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="css/style-m.css" />
+    <link rel="stylesheet" href="css/animation.css" />
+</head>
+<body>
+<!-- 	 <img src="share.jpg" width="0" height="0" alt="" style="display: block;" /> -->
+	<div class="game-state">
+		<div class="game-state-inner">
+			<div class="game-progress">
+				<div class="game-progress-inner"></div>
+			</div>
+			<div class="game-level"></div>
+		</div>
+	</div>
+	    <div class="container">
+        <div class="game-info">
+            <div class="game-score">
+                <div class="current-score">
+                    <div class="label-title">SCORE</div>
+                    <div class="score-value"></div>
+                </div>
+                <div class="combo-best">
+                    <div class="label-title">COMBO</div>
+                    <div class="combo-value"></div>
+                    <div class="best-score"></div>
+                </div>
+                <div class="restart-button btn">NEW GAME</div>
+                <div class="help-button btn">HELP</div>
+            </div>
+            <div class="game-next">
+                <div class="next-title">NEXT TILES</div>
+                <div class="next-cell"></div>
+                <div class="next-cell"></div>
+                <div class="next-cell"></div>
+                <div class="next-cell"></div>
+                <div class="next-cell"></div>
+                <div class="next-cell"></div>
+            </div>
+        </div>
+        <div class="game-container">
+            <div class="grid-container">
+                <div class="grid-row">
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                </div>
+                <div class="grid-row">
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                </div>
+                <div class="grid-row">
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                </div>
+                <div class="grid-row">
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                </div>
+                <div class="grid-row">
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                </div>
+                <div class="grid-row">
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                </div>
+                <div class="grid-row">
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                </div>
+            </div>
+
+            <div class="tile-container"></div>
+
+            <div class="touchpad-container">
+                <div class="touchpad-row">
+                    <div class="touchpad-cell"></div>
+                    <div class="touchpad-cell"></div>
+                    <div class="touchpad-cell"></div>
+                    <div class="touchpad-cell"></div>
+                    <div class="touchpad-cell"></div>
+                    <div class="touchpad-cell"></div>
+                    <div class="touchpad-cell"></div>
+                </div>
+                <div class="touchpad-row">
+                    <div class="touchpad-cell"></div>
+                    <div class="touchpad-cell"></div>
+                    <div class="touchpad-cell"></div>
+                    <div class="touchpad-cell"></div>
+                    <div class="touchpad-cell"></div>
+                    <div class="touchpad-cell"></div>
+                    <div class="touchpad-cell"></div>
+                </div>
+                <div class="touchpad-row">
+                    <div class="touchpad-cell"></div>
+                    <div class="touchpad-cell"></div>
+                    <div class="touchpad-cell"></div>
+                    <div class="touchpad-cell"></div>
+                    <div class="touchpad-cell"></div>
+                    <div class="touchpad-cell"></div>
+                    <div class="touchpad-cell"></div>
+                </div>
+                <div class="touchpad-row">
+                    <div class="touchpad-cell"></div>
+                    <div class="touchpad-cell"></div>
+                    <div class="touchpad-cell"></div>
+                    <div class="touchpad-cell"></div>
+                    <div class="touchpad-cell"></div>
+                    <div class="touchpad-cell"></div>
+                    <div class="touchpad-cell"></div>
+                </div>
+                <div class="touchpad-row">
+                    <div class="touchpad-cell"></div>
+                    <div class="touchpad-cell"></div>
+                    <div class="touchpad-cell"></div>
+                    <div class="touchpad-cell"></div>
+                    <div class="touchpad-cell"></div>
+                    <div class="touchpad-cell"></div>
+                    <div class="touchpad-cell"></div>
+                </div>
+                <div class="touchpad-row">
+                    <div class="touchpad-cell"></div>
+                    <div class="touchpad-cell"></div>
+                    <div class="touchpad-cell"></div>
+                    <div class="touchpad-cell"></div>
+                    <div class="touchpad-cell"></div>
+                    <div class="touchpad-cell"></div>
+                    <div class="touchpad-cell"></div>
+                </div>
+                <div class="touchpad-row">
+                    <div class="touchpad-cell"></div>
+                    <div class="touchpad-cell"></div>
+                    <div class="touchpad-cell"></div>
+                    <div class="touchpad-cell"></div>
+                    <div class="touchpad-cell"></div>
+                    <div class="touchpad-cell"></div>
+                    <div class="touchpad-cell"></div>
+                </div>
+            </div>
+
+            <div class="game-message">
+                <div class="game-message-title">GAME OVER</div>
+                <div class="game-message-text"></div>
+                <div class="game-message-btn">点击右上角分享到朋友圈吧</div>
+            </div>
+            <div class="game-tip"></div>
+            <div class="game-help">
+                <img src="help.jpg" />
+            </div>
+        </div>
+</body>
+</html>
