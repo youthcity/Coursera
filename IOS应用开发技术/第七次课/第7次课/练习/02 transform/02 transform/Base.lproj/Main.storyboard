@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Op-k3-kYk">
+                                <rect key="frame" x="68" y="376" width="32" height="36"/>
+                                <state key="normal" backgroundImage="sub_black_up.png"/>
+                                <state key="highlighted" backgroundImage="sub_blue_up.png"/>
+                                <connections>
+                                    <action selector="run:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5i5-Zx-du7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="76i-bp-G79">
+                                <rect key="frame" x="68" y="457" width="32" height="36"/>
+                                <state key="normal" backgroundImage="sub_black_down.png"/>
+                                <connections>
+                                    <action selector="run:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2Xt-OX-Zo1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s8D-0i-KbI">
+                                <rect key="frame" x="25" y="422" width="36" height="32"/>
+                                <state key="normal" backgroundImage="sub_black_prev.png"/>
+                                <connections>
+                                    <action selector="run:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Fot-gl-Gfc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5rW-6n-k7X">
+                                <rect key="frame" x="103" y="422" width="36" height="32"/>
+                                <state key="normal" backgroundImage="sub_black_next.png"/>
+                                <connections>
+                                    <action selector="run:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ayz-dv-p62"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="20" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4kI-a4-sNA">
+                                <rect key="frame" x="183" y="457" width="46" height="30"/>
+                                <state key="normal" backgroundImage="sub_black_add.png"/>
+                                <connections>
+                                    <action selector="scale:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pgd-K4-Uuz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="11" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4g8-kZ-Xue">
+                                <rect key="frame" x="254" y="404" width="46" height="30"/>
+                                <state key="normal" backgroundImage="sub_black_rotate_cw.png"/>
+                                <connections>
+                                    <action selector="Rotate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zfW-Oc-pTQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="10" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3sP-Hq-PJu">
+                                <rect key="frame" x="183" y="404" width="45" height="30"/>
+                                <state key="normal" backgroundImage="sub_black_rotate_ccw.png"/>
+                                <connections>
+                                    <action selector="Rotate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Zpv-y7-OWu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="21" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ws4-qp-29S">
+                                <rect key="frame" x="254" y="467" width="46" height="15"/>
+                                <state key="normal" backgroundImage="sub_black_remove.png"/>
+                                <connections>
+                                    <action selector="scale:" destination="BYZ-38-t0r" eventType="touchUpInside" id="W3G-DP-cfg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3zM-dG-3Z4">
+                                <rect key="frame" x="105" y="158" width="110" height="110"/>
+                                <state key="normal" title="hello" backgroundImage="icon2.jpg"/>
+                                <state key="highlighted" title="world" backgroundImage="icon1.jpg"/>
+                                <connections>
+                                    <action selector="reset:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tCi-mV-y1l"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="btn" destination="3zM-dG-3Z4" id="nsD-7m-uoc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="224" y="171"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="icon1.jpg" width="220" height="220"/>
+        <image name="icon2.jpg" width="220" height="220"/>
+        <image name="sub_black_add.png" width="37" height="36"/>
+        <image name="sub_black_down.png" width="32" height="36"/>
+        <image name="sub_black_next.png" width="36" height="32"/>
+        <image name="sub_black_prev.png" width="36" height="32"/>
+        <image name="sub_black_remove.png" width="36" height="12"/>
+        <image name="sub_black_rotate_ccw.png" width="40" height="34"/>
+        <image name="sub_black_rotate_cw.png" width="40" height="34"/>
+        <image name="sub_black_up.png" width="32" height="36"/>
+        <image name="sub_blue_up.png" width="32" height="36"/>
+    </resources>
+</document>
