@@ -1,0 +1,75 @@
+.catalog {
+	border-right: 1px solid #efefef;
+}
+
+.list-group {
+	list-style: none;
+	font-size: 1.2em;
+
+}
+
+.list-group li {
+	padding-bottom: 15px;
+}
+.list-group li a {
+padding-left: 58px;
+
+}
+.list-group li a,.list-group li a:hover {
+text-decoration: none;
+color: #333;
+}
+
+.list-header {
+	padding-top: 20px;
+	margin-bottom: 10px;
+}
+
+.list-group li:nth-child(3) {
+	border-bottom: 1px solid #efefef;
+}
+
+.list-group li:nth-child(6) {
+	border-bottom: 1px solid #efefef;
+}
+
+.list-group li:nth-child(9) {
+	border-bottom: 1px solid #efefef;
+}
+
+#btn-taobao {
+	width: 100%;
+	text-align: center;
+	font-size: 1em;
+	padding-left: 0;
+	/*这里有问题*/
+	padding:6px auto;
+}
+
+
+/*product*/
+ul.clothes-up {
+	list-style: none;
+}
+
+
+
+ul.clothes-up li.col-xs-3 p {
+	padding: 0;
+	margin: 0;
+}
+
+
+
+
+ul.clothes-up li.col-xs-3 p a, ul.clothes-up li.col-xs-3 p a:hover {
+	color: #000;
+}
+
+ul.clothes-up li.col-xs-3 p.product-h {
+	padding-top: 10px;
+}
+
+/*div.row h2.page-header {
+	padding-left: 0px;
+}*/
