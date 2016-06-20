@@ -33,10 +33,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   </head>
 <!-- NAVBAR
 ================================================== -->
-  <body>    
+  <body>
+  	<jsp:include page="header.jsp"/>    
     <div class="container">
       <form class="form-signin" action="r_check.jsp" method="post">
-        <h2 class="form-signin-heading">Please register</h2>
+        <h2 class="form-signin-heading">Create Account</h2>
         <label for="inputEmail" class="sr-only">Email address</label>
         <input type="email" id="inputEmail" class="form-control" name="userName" placeholder="Email address"  autofocus>
         <label for="inputPassword" class="sr-only">Password</label>
@@ -48,24 +49,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
             <input type="checkbox" value="remember-me"> Remember me
           </label>
         </div> -->
-        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Create your account</button>
       </form>
 
     </div> <!-- /container -->
   
-      <!-- FOOTER -->
-      <footer>
-        <div class="container">
-        <div class="footer-p">
-          <p class="text-center">还记得你的运动梦想么？</p>
-        </div>
-        <!--   <hr /> -->
-          <!-- <p class="pull-right"><a href="#">Back to top</a></p> -->
-          <p class="text-center" id="footer-p2">&copy; 2016 | 能量 | 苏ICP备 16023450 徐州阿拉萌网络科技有限公司
-| &middot; <a href="#">Back to top</a></p>
-
-        </div>
-      </footer>
+	<jsp:include page="footer.jsp"/>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->

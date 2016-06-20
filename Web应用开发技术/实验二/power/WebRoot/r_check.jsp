@@ -64,6 +64,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
       {
     	 request.setAttribute("username", userName);
     	 request.setAttribute("password", userPwd);
+    	 //服务器端跳转
     	 request.getRequestDispatcher("success.jsp").forward(request, response);
           
       }

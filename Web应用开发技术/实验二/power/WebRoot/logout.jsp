@@ -1,3 +1,5 @@
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
 <html lang="zh-CN">
   <head>
@@ -27,37 +29,27 @@
   </head>
 <!-- NAVBAR
 ================================================== -->
-  <body>    
+  <body>
+  <jsp:include page="header.jsp"/>    
     <div class="container">
-      <form class="form-signin">
-        <h2 class="form-signin-heading">Please sign in</h2>
-        <label for="inputEmail" class="sr-only">Email address</label>
-        <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
-        <label for="inputPassword" class="sr-only">Password</label>
-        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
-        <div class="checkbox">
-          <label>
-            <input type="checkbox" value="remember-me"> Remember me
-          </label>
-        </div>
-        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
-      </form>
+      <div class="jumbotron">
+    <%
+ 		response.setHeader("refresh","10;url=login.jsp");//定时跳转
+ 		session.invalidate();//注销
+	%>
+        <h2>你好,你已经退出本系统,两秒后跳会首页  <span class="glyphicon	 glyphicon-ok" style="color:	
+#228B22;"  aria-hidden="true"></span></h2>
+		<h3 class="leader">You have successfully signed out.</h3>
+       <div class="alert alert-success" role="alert"><p>如没有跳转,请按这里 </p>
+       </div> 	  
+        <p>
+          <a class="btn btn-lg btn-primary" href="login.jsp" role="button">Return Login In »</a>
+        </p>
+      </div>
 
     </div> <!-- /container -->
   
-      <!-- FOOTER -->
-      <footer>
-        <div class="container">
-        <div class="footer-p">
-          <p class="text-center">还记得你的运动梦想么？</p>
-        </div>
-        <!--   <hr /> -->
-          <!-- <p class="pull-right"><a href="#">Back to top</a></p> -->
-          <p class="text-center" id="footer-p2">&copy; 2016 | 能量 | 苏ICP备 16023450 徐州阿拉萌网络科技有限公司
-| &middot; <a href="#">Back to top</a></p>
-
-        </div>
-      </footer>
+	<jsp:include page="footer.jsp"/>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->

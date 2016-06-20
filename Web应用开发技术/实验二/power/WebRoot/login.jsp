@@ -1,3 +1,5 @@
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
 <html lang="zh-CN">
   <head>
@@ -27,14 +29,15 @@
   </head>
 <!-- NAVBAR
 ================================================== -->
-  <body>    
+  <body>
+  <jsp:include page="header.jsp"/>    
     <div class="container">
       <form class="form-signin" action="check.jsp" method="post">
         <h2 class="form-signin-heading">Please sign in</h2>
         <label for="inputEmail" class="sr-only">Email address</label>
-        <input type="email" id="inputEmail" class="form-control" name="userName" placeholder="Email address" required autofocus>
+        <input type="email" id="inputEmail" class="form-control" name="userName" placeholder="Email address"  autofocus>
         <label for="inputPassword" class="sr-only">Password</label>
-        <input type="password" id="inputPassword" class="form-control" name="userPwd" placeholder="Password" required>
+        <input type="password" id="inputPassword" class="form-control" name="userPwd" placeholder="Password" >
         <div class="checkbox">
           <label>
             <input type="checkbox" value="remember-me"> Remember me
@@ -45,19 +48,7 @@
 
     </div> <!-- /container -->
   
-      <!-- FOOTER -->
-      <footer>
-        <div class="container">
-        <div class="footer-p">
-          <p class="text-center">还记得你的运动梦想么？</p>
-        </div>
-        <!--   <hr /> -->
-          <!-- <p class="pull-right"><a href="#">Back to top</a></p> -->
-          <p class="text-center" id="footer-p2">&copy; 2016 | 能量 | 苏ICP备 16023450 徐州阿拉萌网络科技有限公司
-| &middot; <a href="#">Back to top</a></p>
-
-        </div>
-      </footer>
+	<jsp:include page="footer.jsp"/>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
