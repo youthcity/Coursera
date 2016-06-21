@@ -34,7 +34,7 @@
     <div class="container">
       <div class="jumbotron">
     <%
- 		response.setHeader("refresh","10;url=login.jsp");//定时跳转
+ 		response.setHeader("refresh","2;url=login.jsp");//定时跳转
  		session.invalidate();//注销
 	%>
         <h2>你好,你已经退出本系统,两秒后跳会首页  <span class="glyphicon	 glyphicon-ok" style="color:	
