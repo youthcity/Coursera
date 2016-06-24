@@ -25,3 +25,8 @@
 int c = [cal sumWithNum1:10 andNum2:5];	
 
 ```
+
+4. @public:在任何地方都可以直接访问对象的成员变量
+ @private:只能在当前类的对象方法中访问成员变量（@implementation中默认是@private）
+ @protected:可以在当前类及其子类的对象方法中访问成员变量（@interface中默认就是@protected）
+ @package:只要处在同一个框架里，就能直接访问对象的成员变量
