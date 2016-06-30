@@ -17,6 +17,12 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/public.css">
     <link rel="stylesheet" type="text/css" href="css/index.css">
+    <style type="text/css">
+      .bumpy-char {
+        line-height: 3.4em;
+        position: relative;
+      } 
+    </style>
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -161,7 +167,7 @@
 
 <!-- 第四层 -->
 <div class="section-row">
-  <p class="text-center">会玩的人，才能组成真正的小组</p>
+  <p class="text-center textfloat" style="font-size:3em">会玩的人，才能组成真正的小组</p>
 </div>
 
 <!-- 第五层 -->
@@ -171,7 +177,7 @@
 
 <!-- 第六层 -->
 <div class="section-row">
-  <p class="text-center">你最需要的，是和你一起运动的人</p>
+  <p class="text-center textfloat" style="font-size:3em">你最需要的，是和你一起运动的人</p>
 </div>
 
 <!-- 第七层 -->
@@ -181,9 +187,9 @@
 
 <!-- 第八层 -->
 <div class="row2">
-  <div class="content ">
-    <p>玩什么？跑步、球类、器械、滑板、跑酷、极限健身、赛车、冲浪、飞行...</p>
-    <p>精彩，不止一种。走出去，去玩，才有能量！</p>
+  <div class="content " style="font-size:1.46em">
+    <p class="textfloat">玩什么？跑步、球类、器械、滑板、跑酷、极限健身、赛车、冲浪、飞行...</p>
+    <p class="textfloat">精彩，不止一种。走出去，去玩，才有能量！</p>
   </div>
 </div>
 
@@ -208,6 +214,15 @@
     <script src="js/jquery-1.12.3.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/login.js"></script>
+    <script type="text/javascript" src="js/jquery.bumpytext.packed.js"></script>
+    <script type="text/javascript" src="js/easying.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+
+      $('p.textfloat').bumpyText();
+
+      });
+    </script>
     <!-- <script type="text/javascript" src="js/xingge.js"></script> -->
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 <!--     <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script> -->
